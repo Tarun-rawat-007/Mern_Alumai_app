@@ -23,7 +23,7 @@ const ContactForm = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post('http://localhost:3000/api/contact', formData);
+      const res = await axios.post(`${import.meta.env.VITE_API_URL}/api/contact`, formData);
       console.log('Submitted:', res.data);
       toast.success("Form submitted successfully!");
     } catch (err) {

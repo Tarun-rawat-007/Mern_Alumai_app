@@ -14,7 +14,7 @@ const SearchFilter = () => {
   const resultsPerPage = 10;
 
   useEffect(() => {
-    axios.get('http://localhost:3000/api/contact')
+    axios.get(`${import.meta.env.VITE_API_URL}/api/contact`)
       .then(response => {
         setAllUsers(response.data);
         setResults(response.data);
