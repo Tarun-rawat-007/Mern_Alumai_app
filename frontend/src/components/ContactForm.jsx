@@ -36,14 +36,16 @@ const ContactForm = () => {
     <div className="min-h-screen bg-white py-8 px-4 flex items-center justify-center" id='register' data-aos="fade-left" >
       <div className="w-full max-w-4xl bg-white border border-gray-400 rounded-2xl shadow-lg p-10">
         <h2 className="text-4xl font-bold text-center mb-8 text-black">Register as an Alumni</h2>
-        <ToastContainer 
-        theme="dark"
-        position="bottom-right
-        "
-        autoClose={3000}
-        hideProgressBar={false}
-        closeOnClick
-      />
+        <ToastContainer
+  theme="dark"
+  position="bottom-right"
+  autoClose={3000}
+  hideProgressBar={false}
+  closeOnClick
+  pauseOnHover
+  draggable
+/>
+
         <form className="space-y-6" onSubmit={handleSubmit}>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <input
