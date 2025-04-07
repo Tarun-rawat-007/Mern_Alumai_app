@@ -38,12 +38,11 @@ const ContactForm = () => {
         <h2 className="text-4xl font-bold text-center mb-8 text-black">Register as an Alumni</h2>
         <ToastContainer 
         theme="dark"
-        position="top-center"
+        position="bottom-right
+        "
         autoClose={3000}
         hideProgressBar={false}
         closeOnClick
-        pauseOnHover
-        draggable
       />
         <form className="space-y-6" onSubmit={handleSubmit}>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
