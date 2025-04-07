@@ -196,20 +196,28 @@ const SearchFilter = () => {
               ))}
             </div>
 
-            {/* 🔽 Pagination Controls */}
-            <div className="flex justify-center gap-2 mb-10">
-              {[...Array(totalPages)].map((_, index) => (
-                <button
-                  key={index}
-                  onClick={() => goToPage(index + 1)}
-                  className={`px-4 py-2 rounded-full ${
-                    currentPage === index + 1 ? 'bg-black text-white' : 'bg-gray-200 text-black'
-                  } hover:bg-gray-300 transition`}
-                >
-                  {index + 1}
-                </button>
-              ))}
-            </div>
+           {/* 🔽 Scrollable Pagination Controls */}
+           <div className="w-full overflow-x-auto mb-10">
+  <div className="flex gap-2 px-4 py-2 justify-center min-w-max">
+    {[...Array(totalPages)].map((_, index) => {
+      const isActive = currentPage === index + 1;
+      return (
+        <button
+          key={index}
+          onClick={() => goToPage(index + 1)}
+          className={`px-4 py-2 rounded-full text-sm whitespace-nowrap transition 
+            ${isActive 
+              ? 'bg-black text-white' 
+              : 'bg-gray-200 text-black hover:bg-gray-300'}`}
+        >
+          {index + 1}
+        </button>
+      );
+    })}
+  </div>
+</div>
+
+
           </>
         )}
       </div>

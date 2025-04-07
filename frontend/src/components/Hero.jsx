@@ -21,7 +21,7 @@ const Hero = () => {
       <img 
   src="https://media.giphy.com/media/qgQUggAC3Pfv687qPC/giphy.gif" 
   alt="Hero Logo or GIF" 
-  className="h-[300px] w-[400px] rounded-xl grayscale hover:grayscale-0 transition duration-300"
+  className="h-[300px] w-[400px] rounded-xl "
 />
 
       </div>
